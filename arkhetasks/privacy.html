@@ -2,46 +2,74 @@
 <html lang="ja">
 <head>
   <meta charset="utf-8" />
-  <title>ArkheTasks プライバシーポリシー</title>
+  <title>ArkheTasks プライバシーポリシー | Arkhemel</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <style>
+    :root { color-scheme: dark; }
+    * { box-sizing: border-box; }
     body {
       margin: 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: #050816;
-      color: #f5f5f5;
+      font-family: system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      background: #020617;
+      color: #f9fafb;
     }
     .wrap {
-      max-width: 800px;
+      max-width: 900px;
       margin: 0 auto;
-      padding: 32px 16px 48px;
+      padding: 24px 16px 40px;
     }
-    h1 {
-      font-size: 1.8rem;
-      margin-bottom: .4rem;
+    header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 20px;
     }
+    header img {
+      width: 40px;
+      height: 40px;
+      border-radius: 12px;
+      object-fit: contain;
+    }
+    header h1 {
+      font-size: 1.5rem;
+      margin: 0;
+    }
+    header p { margin: 2px 0 0; font-size: .85rem; color:#cbd5f5; }
     h2 {
-      font-size: 1.2rem;
-      margin-top: 1.6rem;
-      border-bottom: 1px solid #1f2937;
-      padding-bottom: .2rem;
+      font-size: 1.1rem;
+      margin-top: 22px;
+      margin-bottom: 6px;
+      border-left: 3px solid #6366f1;
+      padding-left: 8px;
     }
-    p, li {
-      line-height: 1.8;
-    }
-    small {
+    p, li { line-height: 1.8; font-size: .93rem; }
+    ul { padding-left: 1.2rem; margin-top: 4px; }
+    a { color: #7bd5ff; }
+    footer {
+      margin-top: 28px;
       font-size: .8rem;
       color: #9ca3af;
     }
-    a {
-      color: #7bd5ff;
+    .links-top {
+      font-size: .85rem;
+      margin-bottom: 10px;
     }
   </style>
 </head>
 <body>
   <div class="wrap">
-    <h1>ArkheTasks プライバシーポリシー</h1>
-    <p>ArkheTasks（以下、「本アプリ」）では、ユーザーのプライバシーを尊重し、以下の方針でデータを取り扱います。</p>
+    <header>
+      <img src="/assets/arkhemel-logo.png" alt="Arkhemel ロゴ">
+      <div>
+        <h1>ArkheTasks プライバシーポリシー</h1>
+        <p>個人開発者 Arkhemel による ArkheTasks のデータ取り扱い方針です。</p>
+      </div>
+    </header>
+
+    <p class="links-top">
+      <a href="/arkhetasks/">← ArkheTasks のページに戻る</a> /
+      <a href="/support/">Arkhemel サポートページへ</a>
+    </p>
 
     <h2>1. 収集する情報</h2>
     <p>本アプリは、開発者が運営するサーバーに対して個人情報やタスク内容などを送信しません。</p>
@@ -84,14 +112,22 @@
 
     <h2>7. お問い合わせ</h2>
     <p>
-      本ポリシーに関するお問い合わせは、下記メールアドレスまでご連絡ください。<br /><br />
-      連絡先メールアドレス：<br />
-      <!-- ★自分の開発者用アドレス -->
-      <a href="mailto:testsubjectarkhemel@gmail.com">testsubjectarkhemel@gmail.com</a>
+      本ポリシーに関するお問い合わせや不具合報告は、以下のメールアドレスまでご連絡ください。
+    </p>
+    <p>
+      メールアドレス：
+      <a href="mailto:testsubjectarkhemel@gmail.com">
+        testsubjectarkhemel@gmail.com
+      </a>
     </p>
 
-    <p style="margin-top:2.5rem;"><a href="./">← ArkheTasks ページに戻る</a></p>
-    <p><a href="/">← トップページに戻る</a></p>
+    <footer>
+      &copy; <span id="y"></span> Arkhemel (被験体アーケメル).&nbsp;
+      <a href="/arkhetasks/">ArkheTasks ページに戻る</a>
+    </footer>
   </div>
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
