@@ -2,41 +2,146 @@
 <html lang="ja">
 <head>
   <meta charset="utf-8" />
-  <title>ArkheTasks - 4列タスク管理</title>
+  <title>ArkheTasks | 4列タスク管理メモ</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <style>
-    body { margin:0; font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; background:#050816; color:#f5f5f5; }
-    .wrap { max-width:800px; margin:0 auto; padding:32px 16px 48px; }
-    h1 { font-size:2rem; margin-bottom:.3rem; }
-    h2 { font-size:1.4rem; margin-top:2rem; border-bottom:1px solid #1f2937; padding-bottom:.25rem; }
-    p,li { line-height:1.7; }
-    a { color:#7bd5ff; }
+    :root { color-scheme: dark; }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      background: #020617;
+      color: #f9fafb;
+    }
+    .wrap {
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 24px 16px 40px;
+    }
+    header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 20px;
+    }
+    header img {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      object-fit: contain;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 1.6rem;
+    }
+    header p {
+      margin: 2px 0 0;
+      font-size: .9rem;
+      color: #cbd5f5;
+    }
+    a { color: #7bd5ff; }
+    h2 {
+      font-size: 1.1rem;
+      margin-top: 22px;
+      margin-bottom: 8px;
+      border-left: 3px solid #6366f1;
+      padding-left: 8px;
+    }
+    p, li { line-height: 1.8; font-size: .93rem; }
+    ul { padding-left: 1.2rem; margin-top: 4px; }
+    .badge {
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: 999px;
+      font-size: .72rem;
+      border: 1px solid #4b5563;
+      color: #e5e7eb;
+      margin-left: 4px;
+    }
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 14px;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 9px 16px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-size: .9rem;
+      background: #111827;
+      border: 1px solid #4b5563;
+      color: #e5e7eb;
+    }
+    .btn.primary {
+      background: linear-gradient(135deg,#4f46e5,#7c3aed);
+      border-color: transparent;
+      color: #f9fafb;
+    }
+    footer {
+      margin-top: 28px;
+      font-size: .8rem;
+      color: #9ca3af;
+    }
   </style>
 </head>
 <body>
   <div class="wrap">
-    <h1>ArkheTasks</h1>
-    <p>BACKLOG → TODAY → DOING → DONE の 4 列で、やりたいことを整理する Android 向けタスク管理アプリです。</p>
+    <header>
+      <img src="/assets/arkhemel-logo.png" alt="Arkhemel ロゴ">
+      <div>
+        <h1>ArkheTasks <span class="badge">Android</span></h1>
+        <p>被験体アーケメルが練習ついでに作った、4列のタスクメモアプリ。</p>
+      </div>
+    </header>
 
-    <h2>特徴</h2>
-    <ul>
-      <li>Backlog（やりたいことのストック）から Today/Doing/DONE へドラッグ感覚で移動</li>
-      <li>タスクタイトルとメモだけのシンプル設計</li>
-      <li>完了履歴を「今週のDONE」として集計表示</li>
-      <li>データはすべて端末内に保存。外部サーバーは一切使用しません</li>
-      <li>エクスポート機能でテキストとしてバックアップ・共有可能（手動操作のみ）</li>
-    </ul>
+    <section>
+      <h2>ざっくり説明</h2>
+      <p>
+        ArkheTasks は、タスクを次の 4 つの列で流していくタイプのシンプルなタスク管理アプリです。
+      </p>
+      <ul>
+        <li><strong>BACKLOG</strong> … そのうちやるかもリスト</li>
+        <li><strong>TODAY</strong> … 今日ちょっと触りたいもの</li>
+        <li><strong>DOING</strong> … 今やってるもの</li>
+        <li><strong>DONE</strong> … 終わったもの（履歴）</li>
+      </ul>
+      <p>
+        高機能なプロジェクト管理ではなく、「とりあえず4列に置いておくと頭が少し軽くなる」くらいのノリのアプリです。<br>
+        自分の勉強と実験用に作っていますが、役に立つ人がいればご自由にどうぞ、くらいのスタンスです。
+      </p>
 
-    <h2>プライバシー</h2>
-    <p>
-      ArkheTasks 本体はログイン機能もオンライン同期も持たず、タスク・メモ・完了履歴はすべて端末内のストレージにのみ保存されます。<br />
-      詳細は <a href="./privacy.html">プライバシーポリシー</a> をご覧ください。
-    </p>
+      <div class="links">
+        <!-- ストア公開したらここにリンクを追加 -->
+        <!-- <a class="btn primary" href="https://play.google.com/...">Google Play で入手</a> -->
+        <a class="btn" href="/support/arkhetasks/privacy.html">プライバシーポリシー</a>
+        <a class="btn" href="/support/">サポート・不具合報告</a>
+        <a class="btn" href="/">Arkhemel トップへ</a>
+      </div>
+    </section>
 
-    <h2>ダウンロード</h2>
-    <p>※ 現在ストア公開準備中です。公開後に Google Play などへのリンクをここに掲載します。</p>
+    <section>
+      <h2>データとプライバシー</h2>
+      <p>
+        タスク内容や履歴は、すべて端末内に保存されます。<br>
+        開発者のサーバーに勝手に送信したり、クラウドに同期したりはしません。
+      </p>
+      <p>
+        詳しく知りたい場合は
+        <a href="/support/arkhetasks/privacy.html">プライバシーポリシー</a>
+        を見てください。
+      </p>
+    </section>
 
-    <p style="margin-top:2.5rem;"><a href="/">← トップページに戻る</a></p>
+    <footer>
+      &copy; <span id="y"></span> Arkhemel (被験体アーケメル).
+    </footer>
   </div>
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
