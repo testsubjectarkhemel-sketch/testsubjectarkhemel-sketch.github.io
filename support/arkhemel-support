@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <title>Support Arkhemel</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #050816;
+      color: #f5f5f5;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 24px 16px 48px;
+    }
+    h1, h2 {
+      text-align: center;
+      margin-bottom: 16px;
+    }
+    p {
+      line-height: 1.7;
+      font-size: 14px;
+    }
+    .card {
+      background: #111827;
+      border-radius: 16px;
+      padding: 16px 20px;
+      margin-top: 20px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+    }
+    a {
+      color: #7c4dff;
+    }
+    button {
+      background: #7c4dff;
+      border: none;
+      border-radius: 999px;
+      padding: 10px 20px;
+      color: #fff;
+      font-size: 14px;
+      cursor: pointer;
+    }
+    button:hover {
+      opacity: .9;
+    }
+    #video-wrapper {
+      margin-top: 12px;
+      display: none;
+    }
+    iframe {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      border: none;
+      border-radius: 12px;
+    }
+    small {
+      font-size: 11px;
+      color: #9ca3af;
+      line-height: 1.4;
+    }
+    .back-links {
+      text-align: center;
+      margin-top: 24px;
+      font-size: 13px;
+    }
+    .back-links a {
+      color: #9ca3ff;
+    }
+  </style>
+
+  <!-- 実際に広告を入れるときは、
+       ここに AdSense などの公式スクリプトを貼る -->
+</head>
+<body>
+  <div class="container">
+    <h1>Support Arkhemel</h1>
+    <p style="text-align:center; margin-bottom:24px;">
+      被験体アーケメルの実験を、ちょっとだけ支援したい人向けのページです。<br />
+      広告・動画・投げ銭など、できる範囲で適当にどうぞ。
+    </p>
+
+    <!-- 広告エリア -->
+    <div class="card">
+      <h2>広告でゆるく応援</h2>
+      <p>
+        このボックス内には広告が表示される予定です（準備中）。<br />
+        表示されるだけでも、わずかに収益につながることがあります。
+      </p>
+      <div style="margin-top:12px; min-height:120px; background:#020617; border-radius:12px; display:flex; align-items:center; justify-content:center;">
+        <small>ここに広告コードを入れる（AdSense 等）</small>
+      </div>
+    </div>
+
+    <!-- 寄付エリア -->
+    <div class="card">
+      <h2>投げ銭・寄付</h2>
+      <p>アプリやコンテンツがちょっとでも役に立ったと感じたら、ここから任意で支援できます。</p>
+      <ul>
+        <!-- 実際のサービスに差し替えて使う -->
+        <li><a href="https://example.com/paypal" target="_blank" rel="noopener">PayPal / クレカで支援する</a></li>
+        <li><a href="https://example.com/note" target="_blank" rel="noopener">note / BOOTH などで支援する</a></li>
+        <li><a href="https://example.com/wishlist" target="_blank" rel="noopener">Amazonほしい物リストから支援する</a></li>
+      </ul>
+      <small>※ 完全に任意です。生活に余裕があるときだけ、無理のない範囲で。</small>
+    </div>
+
+    <!-- 動画で応援 -->
+    <div class="card">
+      <h2>広告付き動画を観て応援</h2>
+      <p>
+        下のボタンを押すと、広告付きの動画が再生されます（YouTube など）。<br />
+        再生してもらえると、少しだけ収益になります。
+      </p>
+      <button onclick="document.getElementById('video-wrapper').style.display='block'">
+        動画を再生する
+      </button>
+      <div id="video-wrapper">
+        <!-- 自分のYouTube動画のURLに差し替える -->
+        <iframe
+          src="https://www.youtube.com/embed/XXXXXXXXXXX"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+
+    <!-- フッター / プライバシー -->
+    <div style="margin-top:24px;">
+      <small>
+        このページには第三者配信の広告が表示される場合があり、クッキー等を使用して閲覧情報が収集されることがあります。<br />
+        詳細は各広告配信事業者のプライバシーポリシーをご確認ください。<br />
+        ArkheTasks 本体のアプリは、タスク・メモ・完了履歴を端末内にのみ保存し、自動的な外部送信は行いません。
+      </small>
+    </div>
+
+    <div class="back-links">
+      <a href="/support/">← サポートページに戻る</a> /
+      <a href="/">トップへ戻る</a>
+    </div>
+  </div>
+</body>
+</html>
