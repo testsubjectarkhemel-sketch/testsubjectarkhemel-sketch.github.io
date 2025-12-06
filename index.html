@@ -2,41 +2,145 @@
 <html lang="ja">
 <head>
   <meta charset="utf-8" />
-  <title>Arkhemel / ArkheTasks</title>
+  <title>Arkhemel | 実験用メモ置き場</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <style>
+    :root { color-scheme: dark; }
+    * { box-sizing: border-box; }
     body {
       margin: 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: #050816;
+      font-family: system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      background: radial-gradient(circle at top, #1f2933 0, #050816 55%, #02010a 100%);
       color: #f5f5f5;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
     .wrap {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 32px 16px 48px;
+      max-width: 960px;
+      width: 100%;
+      padding: 32px 16px 40px;
+      text-align: center;
     }
-    h1 { font-size: 2rem; margin-bottom: .2rem; }
-    h2 { font-size: 1.3rem; margin-top: 2rem; border-bottom: 1px solid #1f2937; padding-bottom: .3rem; }
-    p  { line-height: 1.7; }
-    a  { color: #7bd5ff; }
-    ul { line-height: 1.7; }
+    header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 32px;
+    }
+    header img {
+      width: 80px;
+      height: 80px;
+      border-radius: 20px;
+      object-fit: contain;
+      filter: drop-shadow(0 0 18px rgba(0,0,0,.75));
+    }
+    h1 {
+      font-size: 1.9rem;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      margin: 0;
+    }
+    p.lead {
+      margin: 0;
+      margin-top: 6px;
+      color: #cbd5f5;
+      font-size: .95rem;
+      line-height: 1.7;
+    }
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: center;
+      margin: 28px 0 20px;
+    }
+    a.btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 20px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-size: .95rem;
+      border: 1px solid rgba(148,163,255,.5);
+      background: rgba(15,23,42,.8);
+      color: #e5e7ff;
+      backdrop-filter: blur(8px);
+      transition: background .15s ease, transform .1s ease, box-shadow .15s ease;
+    }
+    a.btn.primary {
+      background: linear-gradient(135deg,#4f46e5,#7c3aed);
+      border-color: transparent;
+      box-shadow: 0 10px 22px rgba(15,23,42,.7);
+    }
+    a.btn:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 12px 26px rgba(0,0,0,.65);
+    }
+    a.btn:active {
+      transform: translateY(0);
+      box-shadow: 0 6px 16px rgba(0,0,0,.7);
+    }
+    section.note {
+      max-width: 640px;
+      margin: 0 auto;
+      padding: 16px 18px;
+      border-radius: 16px;
+      background: rgba(15,23,42,.8);
+      border: 1px solid rgba(148,163,255,.3);
+      text-align: left;
+      font-size: .85rem;
+      color: #d1d5db;
+      line-height: 1.7;
+    }
+    section.note h2 {
+      font-size: .95rem;
+      margin: 0 0 6px;
+      color: #e5e7ff;
+    }
+    footer {
+      margin-top: 26px;
+      font-size: .8rem;
+      color: #9ca3af;
+    }
+    footer a { color: #9fb5ff; }
   </style>
 </head>
 <body>
   <div class="wrap">
-    <h1>Arkhemel / ArkheTasks</h1>
-    <p>ここは Arkhemel（ディー）のポータルサイトです。</p>
+    <header>
+      <img src="/assets/arkhemel-logo.png" alt="Arkhemel ロゴ">
+      <h1>Arkhemel</h1>
+      <p class="lead">
+        被験体アーケメルの、個人的な実験ログ置き場みたいなサイトです。<br>
+        勉強ついでに作ったアプリや、試しに動かしているものを静かに並べておきます。
+      </p>
+    </header>
 
-    <h2>ArkheTasks</h2>
-    <p>BACKLOG → TODAY → DOING → DONE の4列で管理するタスクアプリ。</p>
-    <ul>
-      <li>（あとで）アプリ紹介ページへのリンク</li>
-      <li>（あとで）プライバシーポリシーへのリンク</li>
-    </ul>
+    <div class="buttons">
+      <a class="btn primary" href="/arkhetasks/">ArkheTasks（タスク管理）</a>
+      <a class="btn" href="/support/">サポート・連絡先</a>
+    </div>
 
-    <h2>Support</h2>
-    <p><a href="/support/">ArkheTasks / Arkhemel を応援するページへ</a></p>
+    <section class="note">
+      <h2>このサイトの扱い方</h2>
+      <p>
+        ここに置いてあるものは、どれも「人生が詰んで暇になった人間が、自分の身体と時間を使って遊び半分で実験している結果」です。<br>
+        個人の記録とメモ帳に近いので、そのつもりで見てもらえるとちょうどいいです。
+      </p>
+    </section>
+
+    <footer>
+      &copy; <span id="y"></span> Arkhemel (被験体アーケメル).
+      &nbsp;|&nbsp;
+      <a href="/support/">サポート</a>
+    </footer>
   </div>
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
